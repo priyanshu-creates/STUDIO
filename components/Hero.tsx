@@ -1,11 +1,36 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
+import { supabase } from '../lib/supabaseClient';
+
+const FALLBACK_IMAGE = 'https://picsum.photos/400/500?random=20';
 
 const Hero: React.FC = () => {
   const { scrollY } = useScroll();
-  const yBg = useTransform(scrollY, [0, 1000], [0, 500]); // 0.5x speed (moves down relative to scroll)
-  const yText = useTransform(scrollY, [0, 1000], [0, -200]); // 1.2x speed (moves up faster)
+  const yBg = useTransform(scrollY, [0, 1000], [0, 500]);
+  const yText = useTransform(scrollY, [0, 1000], [0, -200]);
+
+  const [latestPostImage, setLatestPostImage] = useState<string>(FALLBACK_IMAGE);
+
+  useEffect(() => {
+    const fetchLatestPost = async () => {
+      try {
+        const { data, error } = await supabase
+          .from('instagram_posts')
+          .select('image_url')
+          .order('scraped_at', { ascending: false })
+          .limit(1)
+          .single();
+
+        if (!error && data?.image_url) {
+          setLatestPostImage(data.image_url);
+        }
+      } catch {
+        // Silently fall back to placeholder
+      }
+    };
+    fetchLatestPost();
+  }, []);
 
   return (
     <section className="relative h-[100dvh] w-full overflow-hidden bg-background">
@@ -48,9 +73,9 @@ const Hero: React.FC = () => {
               We recognized a gap in the luxury industry. Partner with us to drive growth and create connections that elevate your brand to the next level.
             </p>
             <img
-              src="https://picsum.photos/400/500?random=20"
+              src={latestPostImage}
               className="w-full h-48 object-cover rounded-none grayscale"
-              alt="Creative Detail"
+              alt="Latest Instagram Post"
             />
           </div>
 

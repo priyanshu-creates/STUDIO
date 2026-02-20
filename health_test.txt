@@ -1,0 +1,45 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host priyanshuroy-official19--instagram-scraper-health.modal.run:443 was resolved.
+* IPv6: (none)
+* IPv4: 44.221.21.163, 35.170.223.113, 34.202.173.80, 34.225.66.215, 54.90.242.25, 54.80.116.204
+*   Trying 44.221.21.163:443...
+*   Trying 35.170.223.113:443...
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* schannel: disabled automatic use of client certificate
+* ALPN: curl offers http/1.1
+* ALPN: server accepted http/1.1
+* Established connection to priyanshuroy-official19--instagram-scraper-health.modal.run (44.221.21.163 port 443) from 192.168.0.126 port 59856 
+* using HTTP/1.x
+> GET / HTTP/1.1
+
+> Host: priyanshuroy-official19--instagram-scraper-health.modal.run
+
+> User-Agent: curl/8.16.0
+
+> Accept: */*
+
+> 
+
+* schannel: remote party requests renegotiation
+* schannel: renegotiating SSL/TLS connection
+* schannel: SSL/TLS connection renegotiated
+* Request completely sent off
+< HTTP/1.1 404 Not Found
+
+< Alt-Svc: h3=":443"; ma=2592000
+
+< Content-Length: 34
+
+< Date: Fri, 20 Feb 2026 03:34:47 GMT
+
+< Vary: accept-encoding
+
+< 
+
+{ [34 bytes data]
+
+100    34  100    34    0     0     28      0  0:00:01  0:00:01 --:--:--    28
+* Connection #0 to host priyanshuroy-official19--instagram-scraper-health.modal.run:443 left intact
+modal-http: invalid function call
