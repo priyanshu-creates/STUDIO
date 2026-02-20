@@ -1,0 +1,53 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host priyanshuroy-official19--health.modal.run:443 was resolved.
+* IPv6: (none)
+* IPv4: 34.225.66.215, 54.90.242.25, 44.221.21.163, 54.80.116.204, 34.202.173.80, 35.170.223.113
+*   Trying 34.225.66.215:443...
+*   Trying 54.90.242.25:443...
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* schannel: disabled automatic use of client certificate
+* ALPN: curl offers http/1.1
+* ALPN: server accepted http/1.1
+* Established connection to priyanshuroy-official19--health.modal.run (34.225.66.215 port 443) from 192.168.0.126 port 56138 
+* using HTTP/1.x
+> GET / HTTP/1.1
+
+> Host: priyanshuroy-official19--health.modal.run
+
+> User-Agent: curl/8.16.0
+
+> Accept: */*
+
+> 
+
+* schannel: remote party requests renegotiation
+* schannel: renegotiating SSL/TLS connection
+* schannel: SSL/TLS connection renegotiated
+* Request completely sent off
+
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0< HTTP/1.1 200 OK
+
+< Alt-Svc: h3=":443"; ma=2592000
+
+< Content-Length: 46
+
+< Content-Type: application/json
+
+< Date: Fri, 20 Feb 2026 03:37:56 GMT
+
+< Modal-Function-Call-Id: fc-01KHWJ06MVGX5EHYFVYBWCN841
+
+< Vary: accept-encoding
+
+< 
+
+{ [46 bytes data]
+
+100    46  100    46    0     0      9      0  0:00:05  0:00:04  0:00:01     9
+100    46  100    46    0     0      9      0  0:00:05  0:00:04  0:00:01    10
+* Connection #0 to host priyanshuroy-official19--health.modal.run:443 left intact
+{"status":"ok","message":"Scraper is running"}
