@@ -67,16 +67,26 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="hidden lg:flex w-full md:col-span-4 flex-col justify-start items-end gap-6 pt-32">
-          <div className="w-full max-w-[280px] p-4 glass-panel rounded-none border-white/10 card-hover animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <div className="group w-full max-w-[280px] p-4 glass-panel rounded-none border-white/10 animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <span className="text-[10px] text-accent-glow font-bold block mb-2 uppercase tracking-widest">Growth Engine</span>
             <p className="text-xs text-primary/80 leading-normal opacity-80 mb-4">
               We recognized a gap in the luxury industry. Partner with us to drive growth and create connections that elevate your brand to the next level.
             </p>
-            <img
-              src={latestPostImage}
-              className="w-full h-48 object-cover rounded-none grayscale"
-              alt="Latest Instagram Post"
-            />
+            <div className="w-full h-48 overflow-hidden">
+              <a
+                href="https://www.instagram.com/atwo.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full h-full"
+                style={{ cursor: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>') 16 16, pointer` }}
+              >
+                <img
+                  src={latestPostImage}
+                  className="w-full h-full object-cover rounded-none grayscale transition-all duration-700 ease-out group-hover:grayscale-0 group-hover:scale-110"
+                  alt="Latest Instagram Post"
+                />
+              </a>
+            </div>
           </div>
 
           <div className="flex gap-4 text-[10px] font-bold tracking-[0.2em] text-off-white/40">
