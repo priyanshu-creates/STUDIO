@@ -1,0 +1,7 @@
+{
+  "name": "A2 Studios - Cinematic AI Agency",
+  "description": "A dark, cinematic AI-native creative studio website for premium brands, featuring immersive transitions and luxury visual storytelling.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

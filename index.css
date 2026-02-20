@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100..900&family=Space+Grotesk:wght@300..700&family=Syne:wght@400..800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-xl;
+  }
+
+  .text-gradient-chrome {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-[#E2E8F0] to-[#94A3B8];
+  }
+
+  .text-gradient-holo {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-[#A78BFA] to-[#38BDF8];
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-off-white font-sans antialiased selection:bg-primary selection:text-background;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+  }
+
+  /* Focus States */
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary/50 ring-offset-2 ring-offset-background transition-shadow duration-300;
+  }
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10;
+  }
+}
+
+.hero-gradient {
+  background: rgba(0, 0, 0, 0.4);
+}
